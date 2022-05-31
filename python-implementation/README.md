@@ -10,6 +10,6 @@ formula
  - waited avaerage of neighboring pixels of similar intensity 
  - preserves edges 
 
- $$ BF[I_p] = { 1 \over W_p} \sum_ { q \in S } G_\sigma{_s} (||p-q||)G_\sigma{  _r (I_p - I_q)}I_q $$
+ $$ BF[I_p] = { 1 \over W_p} \sum_ { q \in S } G_\sigma{_s} (||p-q||)G_\sigma{_r}{(I_p - I_q)}I_q $$
 
- $$ W_p = \sum_{ q \in S } G_\sigma{_s} (||p-q||)G_\sigma{  _r (I_p - I_q)} $$
+ $$ W_p = \sum_{ q \in S } G_\sigma{_s} (||p-q||)G_\sigma{_r}{(I_p - I_q)} $$
