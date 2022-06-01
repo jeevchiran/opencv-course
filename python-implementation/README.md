@@ -38,3 +38,6 @@ ___
 ## canny 
 link : https://www.geeksforgeeks.org/implement-canny-edge-detector-in-python-using-opencv/ 
 
+
+# Morphology operations
+
