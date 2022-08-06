@@ -5,7 +5,7 @@
 `caer.train_val_split()` is a deprecated feature in [`caer`](https://github.com/jasmcaus/caer/). Use `sklearn.model_selection.train_test_split()` instead. See [#9](https://github.com/jasmcaus/opencv-course/issues/9) for more details.
 
 
-# Course Outline (with timestamps)
+
 ## 1. Installation
 Besides installing OpenCV, we cover the installation of the following package:
 
