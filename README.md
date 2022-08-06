@@ -1,5 +1,4 @@
-# OpenCV with Python in 4 Hours
-Notes and code used in my [**Python and OpenCV course**](https://youtu.be/oXlwWbU8l2o) on [freeCodeCamp.org](http://freecodecamp.org). You can find me on [Twitter](https://twitter.com/jasmcaus) for more info on courses I'm working on currently.
+
 
 
 ## Important Updates:
