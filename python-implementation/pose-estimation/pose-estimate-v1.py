@@ -1,4 +1,3 @@
-from hashlib import sha1
 import cv2
 import numpy as np
 
@@ -18,6 +17,8 @@ def homography(corners,dim):
         y = corners[i][1]
         A[2 * i, :] = [-x, -y, -1, 0, 0, 0, x * x_prime, y * x_prime, x_prime]
         A[2 * i+1, :] = [0, 0, 0, -x, -y, -1, x * y_prime, y * y_prime, y_prime]
+
+
     [U,S,V] = np.linalg.svd(A)
     # x is equivalent to the eigenvector column of V that corresponds to the 
     # smallest singular value. A*x ~ 0
@@ -104,26 +105,6 @@ def drawCube(tagcorners, new_corners,frame,edge_color):
 			cv2.line(frame,tuple(new_corners[i]),tuple(new_corners[i+1]),edge_color,thickness)
         
 	return frame
-
-
-def makeContours(corners1,corners2):
-	contours = []
-	for i in range(len(corners1)):
-		if i==3:
-			p1 = corners1[i]
-			p2 = corners1[0]
-			p3 = corners2[0]
-			p4 = corners2[i]
-		else:
-			p1 = corners1[i]
-			p2 = corners1[i+1]
-			p3 = corners2[i+1]
-			p4 = corners2[i]
-		contours.append(np.array([p1,p2,p3,p4], dtype=np.int32))
-	contours.append(np.array([corners1[0],corners1[1],corners1[2],corners1[3]], dtype=np.int32))
-	contours.append(np.array([corners2[0],corners2[1],corners2[2],corners2[3]], dtype=np.int32))
-
-	return contours
 
 def findcontours(frame,threshold):
     imgray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
