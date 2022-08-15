@@ -34,8 +34,8 @@ def projection_mat(K,H):
 	K_inv=np.linalg.inv(K)
 
     # depth
-	a=np.dot(K_inv,h1)
-	c=np.dot(K_inv,h2)
+	a=K_inv@h1
+	c=K_inv@h2
 	lamda=1/((np.linalg.norm(a)+np.linalg.norm(c))/2)
 
     # H_inverse
